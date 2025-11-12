@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Essar Portfolio</title>
+  <style>
+    body {
+      font-family: 'Poppins', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f6fa;
+      color: #040905;
+    }
+
+    header {
+      background-color: #207C00;
+      color: #fff;
+      text-align: center;
+      padding: 25px 10px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 28px;
+      letter-spacing: 1px;
+    }
+
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 40px 60px;
+    }
+
+    .project {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      overflow: hidden;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .project:hover {
+      transform: scale(1.02);
+    }
+
+    .project img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    .project h3 {
+      text-align: center;
+      margin: 10px 0;
+      color: #0D1B2A;
+      font-size: 18px;
+      padding: 0 10px;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #207C00;
+      color: #fff;
+      padding: 15px 10px;
+      margin-top: 30px;
+      font-size: 14px;
+    }
+
+     /* Popup (lightbox) styling */
+     .popup {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .popup img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 20px;
+      right: 40px;
+      color: white;
+      font-size: 35px;
+      font-weight: bold;
+      cursor: pointer;
+      background: transparent;
+      border: none;
+    }
+
+    .close-btn:hover {
+      color: #ff5555;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 22px; }
+      .project img { height: 180px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="../images/Logo5.png" alt="EEC" class="logo" width="800px">
+    <h2>Our Major Works – Project Gallery</h2>
+  </header>
+  
+  <style>
+    header {
+      background-color: #207C00;
+      text-align: center;
+      padding: 25px ;
+    }
+
+    header h2 {
+      font-size: 30px;
+      letter-spacing: 1px;
+      margin: 0;
+    }
+  </style>
+  
+
+  <div class="gallery-container">
+    <div class="project">
+      <img src="../images/Picture1 .png" alt="Project 1 " onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+      <img src="../images/picture2.jpg" alt="Project 1" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+
+      <h3>M/S ASV CHANDILYA AT OMR</h3>
+    </div>
+
+    <div class="project">
+      <img src="../images/Picture3.png" alt="Project 2" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+      <img src="../images/Picture4.png" alt="Project 2" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+
+      <h3>M/S SEYANG AUTOMATIVE PVT LTD AT ORAGADAM</h3>
+    </div>
+
+    <div class="project">
+      <img src="../images/project_5.jpg" alt="Project 3" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+
+      <h3>M/S BMW WAREHOUSE AT MM NAGAR</h3>
+    </div>
+
+    <div class="project">
+      <img src="../images/Picture5.png" alt="Project 4" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+      <img src="../images/Picture6.png" alt="Project 4" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+
+      <h3>M/S EXPRESS AVENUE FOOD COURT AT ROYAPETTAH</h3>
+    </div>
+
+    <div class="project">
+      <img src="../images/Picture7.png" alt="Project 5" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+
+      <h3>M/S HEXAWARE TECHNOLOGIES LTD - SIRUSERI BUS BAY</h3>
+    </div>
+
+    <div class="project">
+      <img src="../images/Picture8.png" alt="Project 6" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+
+      <h3>M/S IT EXPRESS WAY PVT LTD (TNRDC) - TOLL PLAZA CANOPY AT SIRUSERI</h3>
+    </div>
+
+    <div class="project">
+      <img src="../images/Picture9.png" alt="Project 6" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+      <img src="../images/Picture10.png" alt="Project 6" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+      <img src="../images/Picture11.png" alt="Project 6" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+
+      <h3>DR. CHERIAN FOUNDATION HOSPITAL</h3>
+    </div>
+
+    <div class="project">
+      <img src="../images/Picture12.png" alt="Project 6" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+
+      <h3>M/S BAER SHOES AMBUR - SHOE FACTORY</h3>
+    </div>
+
+    <div class="project">
+      <img src="../images/Picture13.png" alt="Project 6" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+      <img src="../images/Picture14.png" alt="Project 6" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+      <img src="../images/Picture15.png" alt="Project 6" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+
+      <h3>M/S APOLLO TYRES AT ORAGADAM</h3>
+    </div>
+
+    <div class="project">
+      <img src="../images/Picture16.png" alt="Project 6" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+      <img src="../images/Picture17.png" alt="Project 6" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+      <img src="../images/Picture18.png" alt="Project 6" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+      <img src="../images/Picture19.png" alt="Project 6" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+
+      <h3>M/S HANSA GREEN TECHNOLOGY PVT LTD AT NANGUNERI - SEZ</h3>
+    </div>
+
+    <div class="project">
+      <img src="../images/Picture20.png" alt="Project 2" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+      <img src="../images/Picture21.png" alt="Project 2" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+
+      <h3>SREE GOKULAM FILM STUDIOS</h3>
+    </div>
+
+    <div class="project">
+      <img src="../images/Picture22.png" alt="Project 6" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+      <img src="../images/Picture23.png" alt="Project 6" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+      <img src="../images/Picture24.png" alt="Project 6" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+
+      <h3>BUS SHELTER GUINDY</h3>
+    </div>
+
+    <div class="project">
+      <img src="../images/Picture25.png" alt="Project 6" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+      <img src="../images/Picture26.png" alt="Project 6" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+
+      <h3>SR BUILDERS</h3>
+    </div>
+
+    <div class="project"> 
+      <img src="../images/Picture28.png" alt="Project 6" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+      <img src="../images/Picture29.png" alt="Project 6" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+      <img src="../images/Picture30.png" alt="Project 6" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+
+      <h3>MALDIVES ISLAND - BOQ FOOD COURT</h3>
+    </div>
+
+    
+    <div class="project">
+      <img src="../images/Picture31.png" alt="Project 6" onclick="openPopup(this.src)" style="width: 100%; height: auto; max-height: calc(100vh - 3cm); border-radius: 10px;">
+
+      <h3>AGARWAL EYE HOSPITAL - BASE FOUNDATION</h3>
+    </div>
+
+  </div> 
+
+  <div class="popup" id="popup">
+    <button class="close-btn" onclick="closePopup()">&times;</button>
+    <img id="popup-img" src="" alt="Enlarged Image">
+  </div>
+
+  <footer>
+    © 2025 Essar Engineering & Contractors | All Rights Reserved
+  </footer>
+
+  <script>
+    function openPopup(src) {
+      const popup = document.getElementById("popup");
+      const popupImg = document.getElementById("popup-img");
+      popupImg.src = src;
+      popup.style.display = "flex";
+    }
+
+    function closePopup() {
+      document.getElementById("popup").style.display = "none";
+    }
+
+    // Close popup when clicking outside image
+    window.onclick = function(event) {
+      const popup = document.getElementById("popup");
+      if (event.target === popup) {
+        popup.style.display = "none";
+      }
+    }
+  </script>
+
+
+</body>
+</html>
