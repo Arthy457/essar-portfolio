@@ -25,7 +25,17 @@
       font-size: 28px;
       letter-spacing: 1px;
     }
-
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 100%;
+      max-width: 300px; /* optional */
+      margin: 5px;
+      border-radius: 8px;
+    }
     .gallery-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -104,8 +114,16 @@
     .close-btn:hover {
       color: #ff5555;
     }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+}
+
 
     @media (max-width: 600px) {
+      .gallery-container {padding: 15px;}
       header h1 { font-size: 22px; }
       .project img { height: 180px; }
     }
@@ -114,7 +132,7 @@
 <body>
 
   <header>
-    <img src="images/Logo5.png" alt="EEC" class="logo" width="800px">
+    <img src="images/Logo5.png" alt="EEC" class="logo">
     <h2>Our Major Works – Project Gallery</h2>
   </header>
   
@@ -124,7 +142,10 @@
       text-align: center;
       padding: 25px ;
     }
-
+    .logo {
+      max-width: 100%;
+      height: auto;
+    }
     header h2 {
       font-size: 30px;
       letter-spacing: 1px;
@@ -253,13 +274,6 @@
   </footer>
 
   <script>
-    function openPopup(src) {
-      const popup = document.getElementById("popup");
-      const popupImg = document.getElementById("popup-img");
-      popupImg.src = src;
-      popup.style.display = "flex";
-    }
-
     function closePopup() {
       document.getElementById("popup").style.display = "none";
     }
@@ -271,9 +285,27 @@
         popup.style.display = "none";
       }
     }
+
+    function openPopup(src) {
+  const popup = document.getElementById("popup");
+  const popupImg = document.getElementById("popup-img");
+  popupImg.src = src;
+  popup.style.display = "flex";
+  setTimeout(() => popup.classList.add("show"), 10);
+}
+
+
   </script>
-
-
+<style>
+  .popup {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.popup.show {
+  opacity: 1;
+}
+</style>
 </body>
 </html>
+
 
